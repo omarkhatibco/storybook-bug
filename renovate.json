@@ -1,0 +1,21 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:recommended"],
+	"commitMessageSuffix": "[MAN-0000]",
+	"timezone": "Europe/Berlin",
+	"schedule": ["after 12am", "before 8am"],
+	"packageRules": [
+		{
+			"description": "Automatically merge minor and patch-level updates",
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+			"automerge": true,
+			"automergeType": "branch"
+		},
+		{
+			"description": "Causes the bot to create a PR whenever there is a new major Renovate version",
+			"matchUpdateTypes": ["major"],
+			"automerge": false,
+			"prCreation": "immediate"
+		}
+	]
+}
