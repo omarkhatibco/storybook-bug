@@ -1,7 +1,7 @@
 {
 	"name": "repo",
 	"private": true,
-	"packageManager": "bun@1.1.20",
+	"packageManager": "pnpm@9.6.0",
 	"workspaces": ["apps/*", "libs/*"],
 	"scripts": {
 		"prepare": "husky",
